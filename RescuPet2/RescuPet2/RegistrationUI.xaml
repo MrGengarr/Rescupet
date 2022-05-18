@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RescuPet2"
+             x:Class="RescuPet2.RegistrationUI">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="https://i.imgur.com/AW9dk4C.png" WidthRequest="180" HeightRequest="180"></Image>
+
+            <Entry x:Name="txtUsername" Placeholder="Usuario" TextColor="White" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="txtEmail" Placeholder="Correo" TextColor="White" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" TextColor="White" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="txtPassword2" Placeholder="Confirmar Password" IsPassword="True" TextColor="White" PlaceholderColor="Gray"></Entry>
+            <Button
+                VerticalOptions="Center"
+                Text="Registrar cuenta"
+                TextColor="Black"
+                BackgroundColor="White"
+                BorderColor="Black"
+                BorderWidth="1.5"
+                CornerRadius="50"
+                Clicked="Button_Clicked">
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

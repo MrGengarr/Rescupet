@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RescuPet2.Anuncios"
+             Title="Anuncios">
+    <ContentPage.Content>
+        <StackLayout>
+            <CollectionView x:Name="AnunciosdeMascotas" ItemsSource="{Binding Pets}" ItemsLayout="HorizontalGrid,4" SelectionMode="Single" SelectedItem="{Binding SelectedItem,Mode=TwoWay}"  SelectionChangedCommand="{Binding ItemSelectedCommand,Mode=TwoWay}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="5" CornerRadius="5" IsClippedToBounds="False" VerticalOptions="Center">
+                            <Grid Padding="3" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20" />
+                                    <RowDefinition Height="20" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80" />
+                                    <ColumnDefinition Width="120" />
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.RowSpan="3"
+                                    Source="{Binding Image}"
+                                    Aspect="AspectFill"
+                                    HeightRequest="80"
+                                    WidthRequest="100" >
+
+                                </Image>
+                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding Name}"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding Colonia}"/>
+                                <Label Grid.Row="2" Grid.Column="1" Text="{Binding Fecha}"/>
+                                <Label Grid.Row="3" Grid.Column="1" Text="{Binding Owner}"/>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

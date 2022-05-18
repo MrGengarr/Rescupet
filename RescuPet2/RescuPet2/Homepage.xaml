@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Xamd.ImageCarousel.Forms.Plugin.Abstractions;assembly=Xamd.ImageCarousel.Forms.Plugin.Abstractions"
+             x:Class="RescuPet2.Homepage"
+             >
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Bienvenido a RescuPet!"
+                HorizontalOptions="CenterAndExpand" TextColor="Black" FontSize="Large" />
+
+            <controls:ImageCarousel x:Name="imgSlider" HeightRequest="400" WidthRequest="200"/>
+
+            <Label Text="Anuncios en tus colonias: "
+                HorizontalOptions="Start" TextColor="Black" FontSize="Large" />
+
+
+            <CollectionView ItemsSource="{Binding Pets}" ItemsLayout="HorizontalGrid,4" SelectionMode="Single" SelectedItem="{Binding SelectedItem,Mode=TwoWay}"  SelectionChangedCommand="{Binding ItemSelectedCommand,Mode=TwoWay}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="5" CornerRadius="5" IsClippedToBounds="False">
+                            <Grid Padding="3">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20" />
+                                    <RowDefinition Height="20" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="70" />
+                                    <ColumnDefinition Width="140" />
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.RowSpan="3"
+                                    Source="{Binding Image}"
+                                    Aspect="AspectFill"
+                                    HeightRequest="60"
+                                    WidthRequest="60" >
+
+                                </Image>
+                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding Name}" TextColor="White"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding Colonia}"/>
+                                <Label Grid.Row="2" Grid.Column="1" Text="{Binding Fecha}"/>
+                                <Label Grid.Row="3" Grid.Column="1" Text="{Binding Owner}"/>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

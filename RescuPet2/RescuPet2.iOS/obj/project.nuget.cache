@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "QnFhkpxa5Tn7d7LMkKI0aaSjtEcsSgUvsRsHoKulNayYhxkjV7sRuINkNN3yV2hVHtbgUYFx4Qx48hgUzOjw3w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mrgen\\source\\repos\\RescuPet2\\RescuPet2\\RescuPet2.iOS\\RescuPet2.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mrgen\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": []
+}
